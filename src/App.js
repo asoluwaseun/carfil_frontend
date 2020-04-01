@@ -6,10 +6,7 @@ import { BrowserRouter, Route, Switch} from 'react-router-dom'
 
 function App() {
   return (
-      <div>
-        <div className="text-center">
-          <h2>CarFil</h2>
-        </div>
+      <div className="bg-light">
         <BrowserRouter>
           <Switch>
             <Route path="/" exact component={Filters} />
