@@ -10,7 +10,7 @@ function App() {
         <BrowserRouter>
           <Switch>
             <Route path="/" exact component={Filters} />
-            <Route path="/car-owners/:filter" render={ (props)=> <CarOwners {...props} />} />
+            <Route path="/car-owners/:filter_id" render={ (props)=> <CarOwners {...props} />} />
           </Switch>
         </BrowserRouter>
       </div>

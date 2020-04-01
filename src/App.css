@@ -23,3 +23,22 @@ ul{
   list-style: none;
   display: inline-flex;
 }
+
+.c-text{
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+a, a:hover{
+  text-decoration: none;
+  color: #000
+}
+.bio{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.border-right{
+  border-right: 1px solid #000 !important
+}
+

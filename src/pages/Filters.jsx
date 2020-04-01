@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import Service from "../Service"
 
 export default class Filters extends Component{
@@ -6,7 +7,8 @@ export default class Filters extends Component{
         super(props)
 
         this.state = {
-            filters: []
+            filters: [],
+            loading: true
         }
     }
 
@@ -15,7 +17,8 @@ export default class Filters extends Component{
             .then((response)=>{
                 if(response.data && response.data.data){
                     this.setState({
-                        filters: response.data.data
+                        filters: response.data.data,
+                        loading: false
                     })
                 }
             })
@@ -26,9 +29,20 @@ export default class Filters extends Component{
            <div className="container">
                <h2 className="p-2"><i className="zmdi zmdi-filter-list"></i> Filter</h2>
                {
+                   this.state.loading &&
+                   (
+                       <div className="text-center p-5">
+                           <i className="fa fa-spin fa-spinner fa-2x"></i>
+                           <br/>
+                           <small>Loading</small>
+                       </div>
+                   )
+               }
+               {
                    this.state.filters.map((filter)=>{
                        return (
-                           <div key={filter.id} className="card shadow-lg mb-3">
+                           <Link key={filter.id} to={"car-owners/"+ "" +filter.id}>
+                             <div className="card shadow-lg mb-3" >
                                <div className="card-body text-center">
                                     <h4>{filter.start_year} - {filter.end_year} </h4>
                                     <h6>{filter.gender}</h6>
@@ -36,7 +50,7 @@ export default class Filters extends Component{
                                        {
                                            filter.countries.map((country,index)=>{
                                                return (
-                                                   <span key={index} className="badge badge-light p-2 mx-1">{country}</span>
+                                                   <span key={index} className="badge badge-light p-2 mx-1 my-1">{country}</span>
                                                )
                                            })
                                        }
@@ -54,6 +68,7 @@ export default class Filters extends Component{
                                    </div>
                                </div>
                            </div>
+                           </Link>
                        )
                    })
                }
