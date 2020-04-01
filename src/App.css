@@ -1,0 +1,16 @@
+.filters-bg{
+  background-color: #289bff;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.card-year{
+  display: inline-flex;
+}
+
+.card{
+  cursor: pointer;
+}
+.card:hover{
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
