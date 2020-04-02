@@ -66,49 +66,49 @@ export default class CarOwners extends Component {
                                         <div className="card-body">
                                             <div className="row">
                                                 <div className="col-4">
-                                                    <img src={car} width="120" height="120" className="img-responsive"/>
+                                                    <img src={car} width="120" height="120" className="img-responsive m-5"/>
                                                 </div>
                                                 <div className="col-8">
-                                                    <h6>{car_owner.first_name + " " + car_owner.last_name}</h6>
+                                                    <h5>{car_owner.first_name + " " + car_owner.last_name}</h5>
                                                     <div className="">
-                                                        <ul className="p-0">
-                                                            <li className="border-right p-1">
+                                                        <ul className="p-0 mb-0">
+                                                            <li className="border-right p-1 px-2">
                                                                 <p className="mb-0 text-muted c-text">Brand</p>
                                                                 <p className="mb-0 c-text">{car_owner.car_model}</p>
                                                             </li>
-                                                            <li className="border-right p-1">
+                                                            <li className="border-right text-left p-1 px-2">
                                                                 <p className="mb-0 text-muted c-text">Year</p>
                                                                 <p className="mb-0 c-text">{car_owner.car_model_year}</p>
                                                             </li>
-                                                            <li className="p-1 text-center">
+                                                            <li className="p-1 text-center px-2">
                                                                 <p className="mb-0 text-muted c-text">Color</p>
                                                                 <p className="mb-0 color text-center" style={{margin: 'auto', backgroundColor: car_owner.car_color}}></p>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                     <div className="">
-                                                        <ul className="p-0">
-                                                            <li className="p-1">
+                                                        <ul className="p-0 mb-0">
+                                                            <li className="p-1 px-2">
                                                                 <p className="mb-0 text-muted c-text">Country</p>
                                                                 <p className="mb-0 c-text">{car_owner.country}</p>
                                                             </li>
-                                                            <li className=" p-1">
+                                                            <li className=" p-1 px-2">
                                                                 <p className="mb-0 text-muted c-text">Gender</p>
                                                                 <p className="mb-0 c-text">{car_owner.gender}</p>
                                                             </li>
-                                                            <li className="p-1">
+                                                            <li className="p-1 px-2">
                                                                 <p className="mb-0 text-muted c-text">Job</p>
                                                                 <p className="mb-0 c-text bio">{car_owner.job_title}</p>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div className="ml-1">
-                                                        <p className="c-text">
-                                                            <span className="text-muted">Email:</span> {car_owner.email}
+                                                    <div className="ml-2">
+                                                        <p className="c-text mb-0">
+                                                            <span className="">Email:</span> {car_owner.email}
                                                         </p>
-                                                        <p className="c-text bio">
+                                                        <p className="c-text bio mb-0">
                                                 <span
-                                                    className="text-muted">Bio:</span> {car_owner.bio}
+                                                    className="">Bio:</span> {car_owner.bio}
                                                         </p>
                                                     </div>
                                                 </div>
