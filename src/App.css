@@ -1,16 +1,44 @@
-.filters-bg{
-  background-color: #289bff;
-  color: #fff;
-  border-radius: 10px;
+.card{
+  min-height: 20vh;
+  cursor: pointer;
+  border-radius: 20px !important;
+  box-shadow: 3px 3px #ccc;
 }
 
-.card-year{
+.badge{
+  border-radius: 20px;
+  background-color: #d4d9de !important;
+  color: #262625;
+  font-weight: 500;
+}
+
+.color{
+  height: 15px;
+  width: 15px;
+  background-color: #d4d9de;
+  border-radius: 50%;
+}
+
+ul{
+  list-style: none;
   display: inline-flex;
 }
 
-.card{
-  cursor: pointer;
+.c-text{
+  font-size: 12px;
+  font-weight: 500;
 }
-.card:hover{
-  box-shadow: 3px 3px 5px 6px #ccc;
+
+a, a:hover{
+  text-decoration: none;
+  color: #000
 }
+.bio{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.border-right{
+  border-right: 1px solid #000 !important
+}
+
